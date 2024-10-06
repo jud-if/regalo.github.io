@@ -42,7 +42,7 @@ body {
     position: absolute;
     width: 48px;
     height: 48px;
-    background-image: url('/img/spriteDog.png');
+    background-image: url('../img/spriteDog.png');
     background-position: 0 0;
     image-rendering: pixelated; /* Mantiene la nitidez del sprite */
     /* Posición inicial: a la izquierda y centrado verticalmente */
