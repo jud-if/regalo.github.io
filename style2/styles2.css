@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    font-family: system-ui;
+    margin: 8px;
+    height: 100vh;
+    background-color:cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    flex-direction: column;
+}
+
+.botonPagina{
+    view-transition-name: boton;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 30px;
+    color: rgb(103, 77, 255);
+    background-color: rgb(255, 187, 249);
+    display: flex;
+}
+
+#game-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#character {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url('/img/$spriteDog.png'); /* Asegúrate de que el nombre y la ruta sean correctos */
+    background-position: 0 0;
+    image-rendering: pixelated; /* Mantiene la nitidez del sprite */
+    /* Posición inicial: a la izquierda y centrado verticalmente */
+    left: calc(50% - 24px); /* Centramos verticalmente restando la mitad de la altura del personaje */
+    top:10%;
+}
+
+.slider {
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    
+    
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.corazonMinino{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/
+
+.slider > button {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider > a:active {
+    top: 1px;
+}
+
+.slider > a:focus {
+    background: #000;
+}
+
+@supports ((scroll-snap-type)){
+    .slider > a {
+      display: none;
+    }
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}

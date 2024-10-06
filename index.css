@@ -1,0 +1,45 @@
+.borde{
+    border-style: dotted double;
+    border-width: thick;
+    border-color: red green yellow blue;
+    margin: 3px;
+}
+
+.ganador {
+    display: flex;
+    flex-direction: row; /* Distribuir en columnas */
+    align-items: center; /* Alinear verticalmente al centro */
+    gap: 20px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column; /* Texto en dos filas */
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: red;
+    margin: 0;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: green;
+    margin:0;
+}
+
+.texto-final p{
+    color: blue;
+}
+
+.regalo{
+    --border-size:20px;
+    border:var(--border-size) solid black;
+    border-image-source: url(./img/heart.svg);
+    border-image-slice: 111;
+    border-image-outset: 0px;
+    display: grid;
+}
