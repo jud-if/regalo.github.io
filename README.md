@@ -1,2 +1,2 @@
 # regalo.github.io
-regalo cringe
+regalo
